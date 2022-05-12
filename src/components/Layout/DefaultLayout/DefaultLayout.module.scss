@@ -1,0 +1,14 @@
+.wrapper {
+    
+}
+
+.container {
+   width: var(--width-global);
+   display: flex;
+   margin: 0 auto;
+}
+.content {
+    flex: 1;
+    background-color: blue;
+    height: 1000px;
+}
