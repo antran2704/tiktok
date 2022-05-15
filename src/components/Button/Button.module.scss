@@ -1,0 +1,69 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 100px;
+    padding: 9px 16px;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+    background-color: var(--white);
+}
+// button type
+.primary {
+    background-color: var(--primary);
+    color: var(--white);
+    
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55;
+        cursor: pointer;
+    }
+}
+
+.text {
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.outline {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+.disable {
+    opacity: 0.6;
+    &:hover {
+        cursor: unset;
+    }
+}
+
+.rounded {
+    padding: 6px;
+    border-radius: 999px;
+    color: rgba(22, 24, 35, 0.75);
+    background-color: rgba(255, 255, 255, 1.0);
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+// button size
+
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+
+.large {
+    min-width: 100%;
+    padding: 14px 16px;
+}
