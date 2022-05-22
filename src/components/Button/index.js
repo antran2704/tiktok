@@ -18,6 +18,9 @@ function Button({
     rounded = false,
     onClick,
     icon,
+    leftIcon,
+    rightIcon,
+    className,
     ...passProps
 }) {
     let Comp = 'button';
@@ -34,16 +37,6 @@ function Button({
         Comp = 'a';
     }
 
-    const classes = cx('wrapper', {
-        primary: primary,
-        outline: outline,
-        small: small,
-        large: large,
-        text: text,
-        disable: disable,
-        rounded: rounded,
-    });
-
     if (disable) {
         Object.keys(props).forEach(function (key) {
             console.log(key);
@@ -52,10 +45,21 @@ function Button({
             }
         });
     }
+
+    const classes = cx('wrapper', className, {
+        primary: primary,
+        outline: outline,
+        small: small,
+        large: large,
+        text: text,
+        disable: disable,
+        rounded: rounded,
+    });
     return (
         <Comp className={classes} {...props}>
-            <span>{children}</span>
-            {icon && <span className={cx('icon')}>{icon}</span>}
+            {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
+            <span className={cx('title')}>{children}</span>
+            {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
         </Comp>
     );
 }
