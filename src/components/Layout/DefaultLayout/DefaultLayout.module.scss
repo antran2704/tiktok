@@ -4,6 +4,7 @@
 
 .container {
    width: var(--width-global);
+   padding: 0 var(--spacer-global);
    display: flex;
    margin: 0 auto;
 }
